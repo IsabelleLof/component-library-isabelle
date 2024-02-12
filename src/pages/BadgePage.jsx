@@ -1,6 +1,6 @@
 import Badge from "../components/Badge";
-// import { SlCheck, SlMagicWand, SlBell } from "react-icons/sl";
-// import { WiCloud, WiDaySunny, WiDayRain } from "react-icons/wi";
+//import { IconName } from "react-icons/fc";
+import { FcLikePlaceholder, FcLike, FcInfo } from "react-icons/fc";
 
 export default function CustomButton() {
   return (
@@ -8,29 +8,32 @@ export default function CustomButton() {
       <div>
         <div className="container mx-auto flex-col text-left relative max-w-5xl pt-20 sm:pt-24 lg:pt-32 px-4">
           <h1>React Badge Component</h1>
+          <h2>props: size, color, icon, children</h2>
           <Badge
-            color={"#ffc0cb"}
-            height={60}
-            width={110}
-            // icon={WiCloud}
+            color={"#0082ff"}
+            height={40}
+            width={40}
+            icon={FcLikePlaceholder}
             iconColor={"#CB214E"}
           />
+          <h2>Liked, outlined</h2>
           <Badge
             color={"#F88CAE"}
             height={50}
-            width={100}
-            // icon={WiDaySunny}
+            width={50}
+            icon={FcLike}
             iconColor={"#7F1734"}
           />
+          <h2>Liked</h2>
           <Badge
-            color={"#997379"}
-            height={40}
-            width={90}
-            // icon={WiDayRain}
+            color={""}
+            height={50}
+            width={50}
+            icon={FcInfo}
             iconColor={"#3a2300"}
           />
+          <h2>Info badge</h2>
         </div>
-        ;
       </div>
     </>
   );

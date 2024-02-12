@@ -1,6 +1,7 @@
 //import React from 'react';
+//import { Children } from "react";
 import Button from "./Button";
-import Picture from "./Picture";
+//import Picture from "./Picture";
 
 export const CardComponent = ({
   title,
@@ -8,9 +9,11 @@ export const CardComponent = ({
   backgroundColor,
   imgScr,
   imgAlt,
+  button,
+  children,
 }) => {
   const cardStyle = {
-    backgroundColor: "white", // Set your desired background color here
+    backgroundColor: backgroundColor, // Set your desired background color here
     padding: "20px",
     borderRadius: "10px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Optional: Add a box shadow for a nice effect
@@ -28,10 +31,25 @@ export const CardComponent = ({
           href="https://www.google.com/"
           className="m-2 mt-8 mb-10"
         /> */}
-          <img src={imgScr} alt={imgAlt} />
+          <img 
+          
+          src={imgScr} 
+          alt={imgAlt} />
           <h1>{title}</h1>
           <p>{description}</p>
-          <Button color="grey" height={60} width={110} disabled={false} />
+          <button>
+            {
+              <Button
+                color="white"
+                height={60}
+                width={110}
+                disabled={false}
+                title="More info"
+                backgroundColor="pink"
+              />
+            }
+          </button>
+          {children}
         </div>
       </div>
     </>
